@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'show.css' %}">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>Table</h1>
+    <p>Uses</p>
+    <table>
+        <th><a href="/">add user</a></th>
+        <tr>
+            <th>Name</th>
+            <th>Lasname</th>
+            <th>Gmail</th>
+            <th>Creat time</th>
+            <th>delete</th>
+            <th>Edit</th>
+        </tr>
+        {% for i in list %}
+        <tr id="googleRow">
+            <td>{{i.name}}</td>
+            <td>{{i.lastname}}</td>
+            <td>{{i.gmail}}</td>
+            <td >{{i.time}}</td>
+            <td><a href="delete/{{i.id}}">Delete</a></td>
+            <td><a href="edit/{{i.id}}">Edit</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+
+</html>
+</body>
+</html>
